@@ -359,7 +359,7 @@ desired_output = "norueNi"
 ```
 Q29 ANS - 
 string = "Big Data iNeuron"
-print(string[-1:-8:-1])
+print(string[:-8:-1])
 output:
 norueNi
 
