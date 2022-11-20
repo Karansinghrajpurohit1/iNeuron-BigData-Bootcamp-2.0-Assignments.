@@ -352,6 +352,7 @@ string = "Big Data iNeuron"
 desired_output = "iNeuron"
 ```
 
+
 Q28 ANS -
 string = "Big Data iNeuron"
 print(string[9:])
@@ -364,18 +365,78 @@ string = "Big Data iNeuron"
 desired_output = "norueNi"
 ```
 
+
+Q29 ANS - 
+
+
 Q30. Resverse the string given in the above question.
+
+
+Q31 ANS -
+string = "Big Data iNeuron"
+print(string[::-1])
+output:
+norueNi ataD giB
 
 Q31. How can you delete entire string at once?
 
+
+Q31 ANS -
+string = "Big Data iNeuron"
+del string
+print(string)
+output:
+NameError: name 'string' is not defined
+
 Q32. What is escape sequence?
+
+Q32 ANS -
+An escape sequence is a sequence of characters that, when used inside a character or string,
+does not represent itself but is converted into another character or series of characters.
+So escape sequences are formed using two things: the first is a backslash (\\),
+and the second is the set of one or more characters following that backslash (\\).
+
+List of Escape Sequence Available in Python
+Escape Sequence	Meaning
+\’	Single quote
+\\’	Double quote
+\\	Backslash
+\n	Newline
+\r	Carriage Return
+\t	Horizontal Tab
+\b	Backspace
+\f	Formfeed
+\v	Vertical Tab
+\0	Null Character
+\N{Name}	Unicode character Database named lookup
+\uxxxxxxxx	Unicode character with a 16-bit hex value
+\Uxxxxxxxx	Unicode character with a 32-bit hex value
+\000	Character with octal value ooo
+\xhh	Character with hex value hh
+
 
 Q33. How can you print the below string?
 ```
 'iNeuron's Big Data Course'
 ```
 
+
+Q33 ANS -
+print('iNeuron's Big Data Course')
+output:
+iNeuron's Big Data Course
+
 Q34. What is a list in Python?
+
+
+Q34 ANS -
+List
+Lists are used to store multiple items in a single variable.
+
+Lists are one of 4 built-in data types in Python used to store collections of data,
+the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+For example:
+mylist = ["apple", "banana", "cherry"]
 
 Q35. How can you create a list in Python?
 
