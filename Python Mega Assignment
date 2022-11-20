@@ -358,7 +358,10 @@ string = "Big Data iNeuron"
 desired_output = "norueNi"
 ```
 Q29 ANS - 
-
+string = "Big Data iNeuron"
+print(string[-1:-8:-1])
+output:
+norueNi
 
 Q30. Resverse the string given in the above question.
 Q30 ANS -
