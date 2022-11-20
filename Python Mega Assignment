@@ -327,13 +327,36 @@ output:
 
 Q26. What is a string? How can we declare string in Python?
 
+
+Q26 ANS -
+A string is a series of characters. In Python, anything inside quotes is a string. And you can use either single or double quotes.
+For example: message = 'This is a string in Python' message = "This is also a string"
+
 Q27. How can we access the string using its index?
+
+
+Q27 ANS -
+String Indexing
+
+Individual characters in a string can be accessed by specifying the string name followed by a number in square brackets ( [] ).
+String indexing in Python is zero-based: the first character in the string has index 0 , the next has index 1 , and so on.
+For example: # if you want to find r from "karan":
+name = "karan"
+print(name[2])
+output:
+r
 
 Q28. Write a code to get the desired output of the following
 ```
 string = "Big Data iNeuron"
 desired_output = "iNeuron"
 ```
+
+Q28 ANS -
+string = "Big Data iNeuron"
+print(string[9:])
+output:
+iNeuron
 
 Q29. Write a code to get the desired output of the following
 ```
