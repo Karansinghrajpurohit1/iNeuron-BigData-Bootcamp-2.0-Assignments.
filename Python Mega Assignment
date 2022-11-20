@@ -308,7 +308,6 @@ Q25. Write a program to display only those numbers from a list that satisfy the 
 ```
 numbers = [12, 75, 150, 180, 145, 525, 50]
 
-
 Q25. Ans -
 numbers = [12, 75, 150, 180, 145, 525, 50]
 for i in numbers:
@@ -326,15 +325,11 @@ output:
 
 
 Q26. What is a string? How can we declare string in Python?
-
-
 Q26 ANS -
 A string is a series of characters. In Python, anything inside quotes is a string. And you can use either single or double quotes.
 For example: message = 'This is a string in Python' message = "This is also a string"
 
 Q27. How can we access the string using its index?
-
-
 Q27 ANS -
 String Indexing
 
@@ -351,8 +346,6 @@ Q28. Write a code to get the desired output of the following
 string = "Big Data iNeuron"
 desired_output = "iNeuron"
 ```
-
-
 Q28 ANS -
 string = "Big Data iNeuron"
 print(string[9:])
@@ -364,23 +357,17 @@ Q29. Write a code to get the desired output of the following
 string = "Big Data iNeuron"
 desired_output = "norueNi"
 ```
-
-
 Q29 ANS - 
 
 
 Q30. Resverse the string given in the above question.
-
-
-Q31 ANS -
+Q30 ANS -
 string = "Big Data iNeuron"
 print(string[::-1])
 output:
 norueNi ataD giB
 
 Q31. How can you delete entire string at once?
-
-
 Q31 ANS -
 string = "Big Data iNeuron"
 del string
@@ -389,7 +376,6 @@ output:
 NameError: name 'string' is not defined
 
 Q32. What is escape sequence?
-
 Q32 ANS -
 An escape sequence is a sequence of characters that, when used inside a character or string,
 does not represent itself but is converted into another character or series of characters.
@@ -419,16 +405,12 @@ Q33. How can you print the below string?
 ```
 'iNeuron's Big Data Course'
 ```
-
-
 Q33 ANS -
 print('iNeuron's Big Data Course')
 output:
 iNeuron's Big Data Course
 
 Q34. What is a list in Python?
-
-
 Q34 ANS -
 List
 Lists are used to store multiple items in a single variable.
