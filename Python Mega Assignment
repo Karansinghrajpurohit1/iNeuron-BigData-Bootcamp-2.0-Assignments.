@@ -475,12 +475,39 @@ output:
 ['Welcome', 'to', 'Big', 'Data', 'course']
 
 Q40. What is a tuple? How is it different from list?
+Q40 - ANS
+The key difference between tuples and lists is that while tuples are immutable objects, lists are mutable.
+This means tuples cannot be changed while lists can be modified.
+Tuples are also more memory efficient than the lists.
 
 Q41. How can you create a tuple in Python?
+Q41 ANS -
+A tuple in Python can be created by enclosing all the comma-separated elements inside the parenthesis ().
+Elements of the tuple are immutable and ordered. It allows duplicate values and can have any number of elements.
+You can even create an empty tuple.
+#this is how we can create a tuple -
+tup1 = ("python", "SQL")
+print(tup1)
+output:
+('python', 'SQL')
 
 Q42. Create a tuple and try to add your name in the tuple. Are you able to do it? Support your answer with reason.
+Q42 ANS -
+iv'e tried and i got error, because tuples are imutable in change this is why we are unable to assign a valur in tuple.
+we cannot assign as value in empty tuple, it's only get's printed when we have entered the value in an tuple.
 
 Q43. Can two tuple be appended. If yes, write a code for it. If not, why?
+Q43 ANS - 
+What happens when you add two tuples?
+tuple is immutable, but you can concatenate multiple tuples with the + operator. At this time,
+the original object remains unchanged, and a new object is generated. Only tuples can be concatenated.
+It cannot be concatenated with other types such as list.
+#code
+a = ("apple")
+b = ("ball")
+print(a,b)
+output:
+apple ball
 
 Q44. Take a tuple as an input and print the count of elements in it.
 
