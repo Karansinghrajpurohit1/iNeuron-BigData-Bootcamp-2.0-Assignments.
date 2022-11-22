@@ -510,10 +510,28 @@ output:
 apple ball
 
 Q44. Take a tuple as an input and print the count of elements in it.
+Q44 ANS - #input = karan singh rajpurohit
+name = str(input("please enter your name - "))
+print("the lenghth of name is - ",len(name))
+output:
+please enter your name - karan singh rajpurohit
+the lenghth of name is -  22
 
 Q45. What are sets in Python?
+Q45 ANS -
+Sets are used to store multiple items in a single variable.
+Set is one of 4 built-in data types in Python used to store collections of data,
+the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.
+A set is a collection which is unordered, unchangeable*, and unindexed.
+A Set is an unordered collection data type that is iterable, mutable and has no duplicate elements.
 
 Q46. How can you create a set?
+Q46 ANS - 
+#code:
+x = set(("apple", "banana", "cherry", "apple"))
+print(x)
+output:
+"apple", "banana", "cherry"
 
 Q47. Create a set and add "iNeuron" in your set.
 
