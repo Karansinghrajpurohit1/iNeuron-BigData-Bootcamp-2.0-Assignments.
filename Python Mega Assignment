@@ -708,12 +708,39 @@ The pop() method removes the last element from an array and returns that element
 The pop(1) method removes the element at the specified position.
 
 Q65. What is the use of popitems() function?
+Q65 ANS -
+Python dictionary popitem() method removes the last inserted key-value pair from the dictionary and returns it as a tuple.
+#code:
+d = {1: '001', 2: '010', 3: '011'}
+print(d.popitem())
+output:
+(3, '011')
 
 Q66. What is the use of keys() function?
+Q66 ANS -
+The keys() method in Python Dictionary,
+returns a view object that displays a list of all the keys in the dictionary in order of insertion using Python.
+#code:
+# Dictionary with three keys
+Dictionary1 = {'A': 'apple', 'B': 'ball', 'C': 'cat'}
+# Printing keys of dictionary
+print(Dictionary1.keys())
+output:
+dict_keys(['A', 'B', 'C'])
 
 Q67. What is the use of values() function?
+Q67 ANS -
+values() is an inbuilt method in Python programming language that returns a view object.
+The view object contains the values of the dictionary, as a list. 
+#code:
+details = {"first_name": "karan", "middle_name": "singh", "last_name": "rajpurohit"}
+print(details.values())
+output:
+dict_values(['karan', 'singh', 'rajpurohit'])
 
 Q68. What are loops in Python?
+Q68 ANS -
+
 
 Q69. How many type of loop are there in Python?
 
