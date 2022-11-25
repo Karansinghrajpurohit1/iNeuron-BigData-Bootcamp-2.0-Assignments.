@@ -626,20 +626,56 @@ and it is immutable by which we cannot update the key and value in dictionary.
 it's different from other data structure because it's contains data in key:value.
 
 Q57. How can we delare a dictionary in Python?
+Q57 ANS - 
+A dictionary in Python is made up of key-value pairs.
+In the two sections that follow you will see two ways of creating a dictionary.
+The first way is by using a set of curly braces, {}, and the second way is by using the built-in dict() function.
+
 
 Q58. What will the output of the following?
 ```
 var = {}
 print(type(var))
 ```
+Q58 ANS -
+var = {}
+print(type(var))
+output:
+<class 'dict'>
 
 Q59. How can we add an element in a dictionary?
+Q59 ANS -
+details = {}
+details["name"]="karan"
+details["age"]=18
+print(details)
+output:
+{'name': 'karan', 'age': 18}
 
 Q60. Create a dictionary and access all the values in that dictionary.
+Q60 ANS -
+details = {
+"name":"karan singh",
+"age":21,
+"location":"ahmedabad"
+}
+print(details.values())
+output:
+dict_values(['karan singh', 21, 'ahmedabad'])
 
 Q61. Create a nested dictionary and access all the element in the inner dictionary.
+Q61 ANS -
+students = {
+"student a":{"name":"karan","roll_no":1,"location":"ahmedabad"},
+"student b":{"name":"vikas","roll_no":2,"location":"ahmedabad"}
+}
+print(students)
+output:
+{'student a': {'name': 'karan', 'roll_no': 1, 'location': 'ahmedabad'}, 'student b': {'name': 'vikas', 'roll_no': 2, 'location': 'ahmedabad'}}
 
 Q62. What is the use of get() function?
+Q62 ANS -
+
 
 Q63. What is the use of items() function?
 
