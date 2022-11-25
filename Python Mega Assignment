@@ -618,6 +618,12 @@ output:
 {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 
 Q56. How is dictionary different from all other data structures.
+Q56 ANS -
+A dictionary is a general-purpose data structure for storing a group of objects.
+A dictionary has a set of keys and each key has a single associated value.
+When presented with a key the dictionary will • A dictionary has a set of keys and each key has a single associated value.
+and it is immutable by which we cannot update the key and value in dictionary.
+it's different from other data structure because it's contains data in key:value.
 
 Q57. How can we delare a dictionary in Python?
 
