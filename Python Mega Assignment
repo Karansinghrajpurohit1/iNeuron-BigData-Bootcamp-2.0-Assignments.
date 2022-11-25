@@ -675,11 +675,37 @@ output:
 
 Q62. What is the use of get() function?
 Q62 ANS -
-
+The get() method returns the value of the item with the specified key.
+#code:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.get("model")
+print(x)
+output:
+Mustang
 
 Q63. What is the use of items() function?
+Q63 ANS -
+The items() method returns a view object.
+The view object contains the key-value pairs of the dictionary, as tuples in a list.
+#code:
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.items()
+print(x)
+output:
+dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
 
 Q64. What is the use of pop() function?
+Q64 ANS - 
+The pop() method removes the last element from an array and returns that element.
+The pop(1) method removes the element at the specified position.
 
 Q65. What is the use of popitems() function?
 
