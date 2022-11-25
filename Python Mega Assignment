@@ -534,22 +534,88 @@ output:
 "apple", "banana", "cherry"
 
 Q47. Create a set and add "iNeuron" in your set.
+Q47 ANS -
+bigdata = set()
+bigdata.add("ineuron")
+print(bigdata)
+output:
+{'ineuron'}
 
 Q48. Try to add multiple values using add() function.
+Q48 ANS -
+bigdata = set()
+bigdata.add("ineuron")
+bigdata.add("python")
+bigdata.add("hadoop")
+bigdata.add("hive")
+print(bigdata)
+output:
+{'ineuron'}
 
 Q49. How is update() different from add()?
+Q49 ANS -
+We use add() method to add single value to a set.
+We use update() method to add sequence values to a set.
+Here Sequences are any iterables including list,tuple,string,dict etc.
 
 Q50. What is clear() in sets?
+Q50 ANS -
+The clear() method removes all elements in a set.
 
 Q51. What is frozen set?
+Q51 ANS -
+the frozen set is a immutable set,
+we cant update,add, or remove the value's from the frozen set,
+frozen set dont have order value and duplicates are not allowed in frozen set.
 
 Q52. How is frozen set different from set?
+Q52 ANS -
+the frozen set is nothing but it's a set only and the main difference between set and frozen set is
+frozen set is immutable and we cant add and remove value from the frozen set, and frozen set dont have order value.
+while in set we can add,remove the value because it's mutable.
+and duplicates are not allowed in both set's - set as well as in frozen set.
 
 Q53. What is union() in sets? Explain via code.
+Q53 ANS -
+The union() method returns a set that contains all items from the original set, and all items from the specified set(s).
+You can specify as many sets you want, separated by commas.
+It does not have to be a set, it can be any iterable object.
+#code:
+x = {"a", "b", "c"}
+y = {"f", "d", "a"}
+z = {"c", "d", "e"}
+result = x.union(y, z)
+print(result)
+output:
+{'e', 'b', 'f', 'd', 'a', 'c'}
 
 Q54. What is intersection() in sets? Explain via code.
+Q54 ANS -
+The intersection() method returns a set that contains the similarity between two or more sets.
+Meaning: The returned set contains only items that exist in both sets, or in all sets if the comparison is done with more than two sets.
+#code:
+x = {"a", "b", "c"}
+y = {"c", "d", "e"}
+z = {"f", "g", "c"}
+result = x.intersection(y, z)
+print(result)
+output:
+{'c'}
 
 Q55. What is dictionary ibn Python?
+Q55 ANS -
+Dictionary
+Dictionaries are used to store data values in key:value pairs.
+A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
+#code:
+car_details =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(car_details)
+output:
+{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 
 Q56. How is dictionary different from all other data structures.
 
