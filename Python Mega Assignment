@@ -740,13 +740,30 @@ dict_values(['karan', 'singh', 'rajpurohit'])
 
 Q68. What are loops in Python?
 Q68 ANS -
-
+loops allows the execution of a statement or a group of statement multiples time,
+in order to enter the loop their are certain conditions defined in the begining,
+once the loop became false the loops stops and control moves out of the loop.
 
 Q69. How many type of loop are there in Python?
+Q69 ANS - there are 3 type of loop are there in python
+while loop.
+for loop.
+nested loops.
 
 Q70. What is the difference between for and while loops?
+Q70 ANS -
+FOR LOOP -
+A for loop is a control flow statement that executes code for a predefined number of iterations.
+The keyword used in this control flow statement is “for”. When the number of iterations is already known, the for loop is used.
+WHILE LOOP -
+A loop that runs a single statement or a set of statements for a given true condition.
+This loop is represented by the keyword "while." When the number of iterations is unknown,
+a "while" loop is used. The statement is repeated until the boolean value is false.
+Because the condition is tested at the beginning of a while loop, it is also known as the pre-test loop.
 
 Q71. What is the use of continue statement?
+Q71 ANS -
+
 
 Q72. What is the use of break statement?
 
