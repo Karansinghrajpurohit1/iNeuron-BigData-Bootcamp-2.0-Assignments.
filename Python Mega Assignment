@@ -763,16 +763,31 @@ Because the condition is tested at the beginning of a while loop, it is also kno
 
 Q71. What is the use of continue statement?
 Q71 ANS -
-
+The continue keyword is used to end the current iteration in a for loop (or a while loop), and continues to the next iteration.
 
 Q72. What is the use of break statement?
+Q72 ANS -
+with the help of 'break' we can control the loop statement, and we can control the sequence of the loop.
+Suppose you want to terminate a loop and skip to the next code after the loop; break will help you do that.
+A typical scenario of using the Break in Python is when an external condition triggers the loop’s termination. 
 
 Q73. What is the use of pass statement?
+Q73 ANS -
+The pass statement is used as a placeholder for future code.
+When the pass statement is executed, nothing happens, but you avoid getting an error when empty code is not allowed.
+Empty code is not allowed in loops, function definitions, class definitions, or in if statements.
 
 Q74. What is the use of range() function?
+Q74 ANS -
+The range() function returns a sequence of numbers,
+starting from 0 by default, and increments by 1 (by default),
+and stops before a specified number.
 
 Q75. How can you loop over a dictionary?
-
+Q75 ANS -
+You can loop through a dictionary by using a for loop.
+When looping through a dictionary, the return value are the keys of the dictionary,
+but there are methods to return the values as well.
 
 ### Coding problems
 Q76. Write a Python program to find the factorial of a given number.
