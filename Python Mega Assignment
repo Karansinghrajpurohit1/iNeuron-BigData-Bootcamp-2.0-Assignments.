@@ -793,6 +793,12 @@ but there are methods to return the values as well.
 Q76. Write a Python program to find the factorial of a given number.
 
 Q77. Write a Python program to calculate the simple interest. Formula to calculate simple interest is SI = (P*R*T)/100
+Q77 ANS -
+p = float(input("please enter the principal amount : "))
+r = float(input("please enter the rate of intrest : "))
+t = float(input("please enter the time : "))
+si = (p*r*t/100)
+print("your simple intrest is ",si)
 
 Q78. Write a Python program to calculate the compound interest. Formula of compound interest is A = P(1+ R/100)^t.
 
