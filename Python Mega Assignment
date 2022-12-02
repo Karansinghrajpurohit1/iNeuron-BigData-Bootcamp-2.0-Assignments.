@@ -1259,3 +1259,5 @@ def alphapat(n):
 # Driver Code
 n = 5
 alphapat(n)
+1
+2
