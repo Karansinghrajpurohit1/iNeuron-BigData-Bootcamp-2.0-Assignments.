@@ -1040,24 +1040,70 @@ Q92. Write a Python program to convert a list of tuples into dictionary.
 Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
 Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
 ```
+Q92 ANS -
+list_1=[('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+dict_1=dict()
+
+for i,j in list_1:
+    dict_1.setdefault(i, []).append(j)
+print(dict_1)
 
 Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.
 ```
 Input: list = [9, 5, 6]
 Output: [(9, 729), (5, 125), (6, 216)]
 ```
+Q93 ANS -
+list1 = [9, 5, 6]
+
+res = [(val, val**3) for val in list1]
+
+print(res)
 
 Q94. Write a Python program to get all combinations of 2 tuples.
 ```
 Input : test_tuple1 = (7, 2), test_tuple2 = (7, 8)
 Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)]
 ```
+Q94 ANS -
+test_tuple1 = (7, 2)
+test_tuple2 = (7, 8)
+
+print("The original tuple 1 : " + str(test_tuple1))
+print("The original tuple 2 : " + str(test_tuple2))
+
+res = [(a, b) for a in test_tuple1 for b in test_tuple2]
+res = res + [(a, b) for a in test_tuple2 for b in test_tuple1]
+
+print("The filtered tuple : " + str(res))
 
 Q95. Write a Python program to sort a list of tuples by second item.
 ```
 Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
 Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]
 ```
+Q95 ANS -
+# Python program to sort a list of tuples by the second Item
+
+# Function to sort the list of tuples by its second item
+def Sort_Tuple(tup):
+	
+	# getting length of list of tuples
+	lst = len(tup)
+	for i in range(0, lst):
+		
+		for j in range(0, lst-i-1):
+			if (tup[j][1] > tup[j + 1][1]):
+				temp = tup[j]
+				tup[j]= tup[j + 1]
+				tup[j + 1]= temp
+	return tup
+
+# Driver Code
+tup =[('for', 24), ('is', 10), ('Geeks', 28),
+	('Geeksforgeeks', 5), ('portal', 20), ('a', 15)]
+	
+print(Sort_Tuple(tup))
 
 Q96. Write a python program to print below pattern.
 ```
@@ -1067,6 +1113,16 @@ Q96. Write a python program to print below pattern.
 * * * * 
 * * * * * 
 ```
+Q96 ANS -
+n = int(input("Enter the number of rows"))  
+for i in range(0, n):  
+    
+        for j in range(0, i + 1):  
+            # printing stars  
+            print("* ", end="")       
+	    
+        print()  
+
 Q97. Write a python program to print below pattern.
 ```
     *
@@ -1075,6 +1131,12 @@ Q97. Write a python program to print below pattern.
  ****
 *****
 ```
+Q97 ANS -
+# python3 code to print pyramid pattern using while loop
+n=5;i=0
+while(i<=n):
+print(" " * (n - i) +"*" * i)
+i+=1
 
 Q98. Write a python program to print below pattern.
 ```
@@ -1084,6 +1146,37 @@ Q98. Write a python program to print below pattern.
  * * * * 
 * * * * * 
 ```
+Q98 ANS -
+
+def triangle(n):
+	
+	# number of spaces
+	k = n - 1
+
+	# outer loop to handle number of rows
+	for i in range(0, n):
+	
+		# inner loop to handle number spaces
+		# values changing acc. to requirement
+		for j in range(0, k):
+			print(end=" ")
+	
+		# decrementing k after each loop
+		k = k - 1
+	
+		# inner loop to handle number of columns
+		# values changing acc. to outer loop
+		for j in range(0, i+1):
+		
+			# printing stars
+			print("* ", end="")
+	
+		# ending line after each row
+		print("\r")
+
+# Driver Code
+n = 5
+triangle(n)
 
 Q99. Write a python program to print below pattern.
 ```
@@ -1093,6 +1186,37 @@ Q99. Write a python program to print below pattern.
 1 2 3 4 
 1 2 3 4 5
 ```
+Q99 ANS -
+# Python 3.x code to demonstrate star pattern
+
+# Function to demonstrate printing pattern of numbers
+def numpat(n):
+	
+	# initialising starting number
+	num = 1
+
+	# outer loop to handle number of rows
+	for i in range(0, n):
+	
+		# re assigning num
+		num = 1
+	
+		# inner loop to handle number of columns
+			# values changing acc. to outer loop
+		for j in range(0, i+1):
+		
+				# printing number
+			print(num, end=" ")
+		
+			# incrementing number at each column
+			num = num + 1
+	
+		# ending line after each row
+		print("\r")
+
+# Driver code
+n = 5
+numpat(n)
 
 Q100. Write a python program to print below pattern.
 ```
@@ -1102,3 +1226,36 @@ C C C
 D D D D 
 E E E E E 
 ```
+Q100 ANS -
+# Python 3.x code to demonstrate star pattern
+
+# Function to demonstrate printing pattern of alphabets
+def alphapat(n):
+	
+	# initializing value corresponding to 'A'
+	# ASCII value
+	num = 65
+
+	# outer loop to handle number of rows
+	# 5 in this case
+	for i in range(0, n):
+	
+		# inner loop to handle number of columns
+		# values changing acc. to outer loop
+		for j in range(0, i+1):
+		
+			# explicitly converting to char
+			ch = chr(num)
+		
+			# printing char value
+			print(ch, end=" ")
+	
+		# incrementing number
+		num = num + 1
+	
+		# ending line after each row
+		print("\r")
+
+# Driver Code
+n = 5
+alphapat(n)
