@@ -20,8 +20,17 @@ then in all higher superclasses, progressing from left to right (by default). Th
 
 
 Q3. How do you distinguish between a class object and an instance object?
+Q3 ANS -
+Python is an object oriented programming language. Almost everything in Python is an object, with its properties and methods.
+A Class is like an object constructor, or a "blueprint" for creating objects.
+
+Instance is an object that belongs to a class. For instance, list is a class in Python. When we create a list,
+we have an instance of the list class. In this article, I will focus on class and instance variables.
 
 Q4. What makes the first argument in a class’s method function special?
+Q4 ANS -
+Self is the first argument to be passed in Constructor and Instance Method. Self must be provided as a First parameter to the Instance method and constructor.
+If you don't provide it, it will cause an error.
 
 Q5. What is the purpose of the init method?
 Q5 ANS -
@@ -158,14 +167,31 @@ the user can call the function by either passing those optional parameters or ju
 Without using keyword arguments. By using keyword arguments.
 
 Q30. What are Lambda Functions?
+Q30 ANS -
+A lambda function is a small anonymous function. A lambda function can take any number of arguments, but can only have one expression.
 
 Q31. Explain Inheritance in Python with an example?
+Q31 ANS -
+Inheritance is a mechanism in which one class acquires the property of another class. For example,
+a child inherits the traits of his/her parents. With inheritance, we can reuse the fields and methods of the existing class.
+Hence, inheritance facilitates Reusability and is an important concept of OOPs.
 
 Q32. Suppose class C inherits from classes A and B as class C(A,B).Classes A and B both have their own versions of method func(). If we call func() from an object of 
 class C, which version gets invoked?
+Q32 ANS -
+?
 
 Q33. Which methods/functions do we use to determine the type of instance and inheritance?
+Q33 ANS -
+Use isinstance() to check an instance's type: isinstance(obj, int) will be True only if obj.__class__ is int or some class derived from int .
+Use issubclass() to check class inheritance: issubclass(bool, int) is True since bool is a subclass of int .
+
 
 Q34.Explain the use of the 'nonlocal' keyword in Python.
+Q34 ANS -
+The nonlocal keyword is used to work with variables inside nested functions, where the variable should not belong to the inner function.
+Use the keyword nonlocal to declare that the variable is not local.
 
 Q35. What is the global keyword?
+Q35 ANS -
+The global keyword is used to create global variables from a no-global scope, e.g. inside a function.
