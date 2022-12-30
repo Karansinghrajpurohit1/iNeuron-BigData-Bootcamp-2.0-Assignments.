@@ -14,12 +14,108 @@ df.dtypes
 Q3. How do you select rows from a Pandas DataFrame based on a condition?
 Q3 ANS -
 
+import pandas as pd
+
+data = {
+    "NAME":["A","B","C","D","E","F"],
+    "AGE":[21,22,23,24,25,21],
+    "FIELD OF STUDY":["BBA","B.COM","BCA","B.A.","B.TECH","M.TECH"],
+    "LOCATION":["AHMEDABAD","MEHSANA","GANDHINAGAR","VADODRA","SURAT","AHMEDABAD"]
+}
+
+students_data = pd.DataFrame(data)
+
+students_data
+
+	NAME	AGE	FIELD OF STUDY	LOCATION
+0	A    	21	BBA           	AHMEDABAD
+1	B   	22	B.COM	          MEHSANA
+2	C   	23	BCA	            GANDHINAGAR
+3	D	    24	B.A.          	VADODRA
+4	E   	25	B.TECH	        SURAT
+5	F   	21	M.TECH        	AHMEDABAD
+
+# if there's a condition that the Age should be more than 23 :-
+students_data2 = students_data[students_data["AGE"]>=23]
+students_data2
+
+# if there's a condition that the fileld of study is equal to "BBA" :-
+students_data3 = students_data[students_data["FIELD OF STUDY"]=="BBA"]
+students_data3
+
+# if there's a condition that the age should be below than 25 :-
+students_data4 = students_data.loc[students_data['AGE']<25]
+students_data4
 
 Q4. How do you rename columns in a Pandas DataFrame?
+Q4 ANS -
+
+import pandas as pd
+data = {
+    "NAME":["A","B","C","D","E","F"],
+    "AGE":[21,22,23,24,25,21],
+    "FIELD OF STUDY":["BBA","B.COM","BCA","B.A.","B.TECH","M.TECH"],
+    "LOCATION":["AHMEDABAD","MEHSANA","GANDHINAGAR","VADODRA","SURAT","AHMEDABAD"]
+}
+
+students_data = pd.DataFrame(data)
+students_data
+
+ NAME	AGE	FIELD OF STUDY	LOCATION
+0	A	  21	BBA           	AHMEDABAD
+1	B 	22	B.COM	          MEHSANA
+2	C	  23	BCA	            GANDHINAGAR
+3	D	  24	B.A.           	VADODRA
+4	E 	25	B.TECH        	SURAT
+5	F 	21	M.TECH	        AHMEDABAD
+
+#THIS IS HOW YOU CAN CHANGE THE COLUMNS NAME IN A DATAFRAME
+students_data1 = students_data.rename(columns={"NAME":"NAMEEEE","AGE":"AGEEEE","LOCATION":"LOCATIONNNN"})
+students_data1
 
 Q5. How do you drop columns in a Pandas DataFrame?
+Q5 ANS -
+
+import pandas as pd
+titanic_data = pd.read_csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
+titanic_data
+
+#DROPPING USING drop()
+#this is how we can drop multiples columns
+titanic_data1 = titanic_data
+titanic_data1.drop(["Sex","Name"], axis = 1)
+
+#THIS IS HOW WE CAN DROP A COLUMN
+titanic_data2 = titanic_data
+titanic_data2.drop(["Sex"], axis = 1)
+
+#THIS IS HOW WE CAN DROP COLUMNS BY INDEX
+titanic_data3 = titanic_data
+titanic_data3.drop(titanic_data3.columns[[2,3]], axis = 1)
+
+#using drop() function with df.iloc()
+titanic_data3 = titanic_data
+titanic_data3.drop(titanic_data3.iloc[:, 2:4], axis = 1)
+
+#using drop() function with df.loc()
+titanic_data4 = titanic_data
+titanic_data4.drop(titanic_data3.loc[:,"PassengerId":"Fare" ], axis = 1)
+
+#using del and for loop
+titanic_data4 = titanic_data3
+for col in titanic_data4.columns:
+  if "Name" in col:
+    del titanic_data4[col]
 
 Q6. How do you find the unique values in a column of a Pandas DataFrame?
+Q6 ANS -
+
+import pandas as pd
+titanic_data = pd.read_csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
+titanic_data
+
+#THIS IS HOW WE CAN FIND UNIQUE VALUES IN A PANDAS DATAFRAME
+titanic_data["Embarked"].unique()
 
 Q7. How do you find the number of missing values in each column of a Pandas DataFrame?
 
