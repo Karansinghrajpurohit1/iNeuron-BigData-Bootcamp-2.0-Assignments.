@@ -118,8 +118,34 @@ titanic_data
 titanic_data["Embarked"].unique()
 
 Q7. How do you find the number of missing values in each column of a Pandas DataFrame?
+Q7 ANS -
+
+import pandas as pd
+titanic_data = pd.read_csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
+titanic_data
+
+# THIS IS HOW WE CAN CHECK THE NULL VALUES IN PYTHON
+titanic_data.isnull()
+
+# THIS IS HOW WE CAN CHECK NUMBER OF NULL VALUES IN COLUMNS
+titanic_data.isnull().sum()
+
+# THIS IS HOW WE CAN CHECK THE NUMBER OF NULL VALUES IN THE DATAFRAME
 
 Q8. How do you fill missing values in a Pandas DataFrame with a specific value?
+Q8 ANS -
+
+import pandas as pd
+titanic_data = pd.read_csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
+titanic_data
+
+#FILLING NULL VALUES WITH THE MEAN OF A COLUMN
+titanic_data8 = titanic_data
+titanic_data8.fillna(value=titanic_data8["Age"].mean())
+
+#FILLING DIFFERENT VALUES IN NULL IN DIFFERENT COLUMNS
+titanic_data7 = titanic_data
+titanic_data7.fillna({"Fare	":"ABCD","Cabin":"XYZ"})
 
 Q9. How do you concatenate two Pandas DataFrames?
 
