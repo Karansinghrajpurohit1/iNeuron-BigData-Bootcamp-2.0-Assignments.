@@ -310,8 +310,31 @@ students_data.sort_values(['maths','english'], ascending=[0,1])
 #english column will be like small to big
 
 Q15. How do you create a copy of a Pandas DataFrame?
+ANS -
+
+import pandas as pd
+students_data2 = pd.DataFrame({
+    'roll_no':[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119],
+    'name_of_students':['sundeep','saradhi','ramesh','suresh','sathwik','abhiram','shrinidhi','dinesh','harish','murali','vasi','kali','ramu','krishna','hari','pawan','ashok','govind','bhargav'],
+    "telugu":[90,50,95,55,88,73,90,75,84,83,85,50,89,20,89,67,25,48,67],
+    "english":[85,60,78,87,84,84,83,78,85,98,86,54,97,45,74,64,81,97,67],
+    "maths":[80,75,68,68,98,91,74,85,76,81,92,64,69,70,85,60,78,87,57],
+    "science":[78,56,48,75,96,48,42,65,34,95,34,81,67,34,76,15,67,98,76],
+    "social":[90,50,95,55,88,85,60,78,87,84,80,75,68,68,98,78,56,48,75]
+    })
+
+# this method will create a refrence of the existing dataframe 
+students_data_refrence = students_data
+students_data_refrence
+
+#this method will create a copy of the dataframe
+students_data_copy = students_data.copy()
+students_data_copy
 
 Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?
+ANS -
+
+
 
 Q17. How do you calculate the mean of a column in a Pandas DataFrame?
 
