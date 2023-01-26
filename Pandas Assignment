@@ -223,9 +223,91 @@ df2.pivot(index='date',columns='city',values='humidity')
 Q13. How do you change the data type of a column in a Pandas DataFrame?
 ANS - 
 
+import pandas as pd
+dff = pd.DataFrame([
+    [1,1,1],
+    [2,2,2],
+    [3,3,3],
+    [4,4,4]],
+    columns = ['col_1','col_2','col_3'])
+    
+print(dff)
+	col_1	col_2	col_3
+0	1	1	1
+1	2	2	2
+2	3	3	3
+3	4	4	4
+
+dff.sort_values(by = 'col_1', ascending= False)
+
+col_1	col_2	col_3
+3	4	4	4
+2	3	3	3
+1	2	2	2
+0	1	1	1
+
+import pandas as pd
+karan = pd.DataFrame([
+    [1,1,1],
+    [2,2,2],
+    ['3',3,3],
+    [4,4,4]],
+    columns = ['col_1','col_2','col_3'])
+
+karan.info()
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4 entries, 0 to 3
+Data columns (total 3 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   col_1   4 non-null      int64
+ 1   col_2   4 non-null      int64
+ 2   col_3   4 non-null      int64
+dtypes: int64(3)
+memory usage: 224.0 bytes
+
+karan['col_1'] = karan['col_1'].astype('int64')
+
+print(karan)
+
+  col_1  col_2  col_3
+0      1      1      1
+1      2      2      2
+2      3      3      3
+3      4      4      4
 
 
 Q14. How do you sort a Pandas DataFrame by a specific column?
+ANS -
+
+import pandas as pd
+students_data = pd.DataFrame({
+    'roll_no':[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119],
+    'name_of_students':['sundeep','saradhi','ramesh','suresh','sathwik','abhiram','shrinidhi','dinesh','harish','murali','vasi','kali','ramu','krishna','hari','pawan','ashok','govind','bhargav'],
+    "telugu":[90,50,95,55,88,73,90,75,84,83,85,50,89,20,89,67,25,48,67],
+    "english":[85,60,78,87,84,84,83,78,85,98,86,54,97,45,74,64,81,97,67],
+    "maths":[80,75,68,68,98,91,74,85,76,81,92,64,69,70,85,60,78,87,57],
+    "science":[78,56,48,75,96,48,42,65,34,95,34,81,67,34,76,15,67,98,76],
+    "social":[90,50,95,55,88,85,60,78,87,84,80,75,68,68,98,78,56,48,75]
+    })
+
+# with this statement the table get's arranged according to the column name in ascending order 'name_of_students'
+students_data.sort_values('name_of_students')
+
+# with this statement the table get's arranged according to the maths column in desending to ascending order
+students_data.sort_values('maths', ascending=False)
+
+# with this statement the table get's arranged according to the maths column in ascending to desending order
+students_data.sort_values('maths', ascending=True)
+
+# with this statement the table get's arranged according to the maths, and roll_no column in desending to ascending order
+students_data.sort_values(['maths','roll_no'], ascending=False)
+
+students_data.sort_values(['maths','english'], ascending=[0,1])
+#zero is for ascending and 1 is for decending
+#maths column will be like big to small
+#english column will be like small to big
 
 Q15. How do you create a copy of a Pandas DataFrame?
 
