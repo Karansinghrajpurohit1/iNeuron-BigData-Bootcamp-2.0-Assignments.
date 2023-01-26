@@ -201,8 +201,29 @@ data1.aggregate({"NUMBER":['sum', 'min'],
 
 
 Q12. How do you pivot a Pandas DataFrame?
+ANS - 
+
+import pandas as pd
+
+df = pd.DataFrame({
+    'date' : ["5/1/2017","5/2/2017","5/3/2017","5/1/2017","5/2/2017","5/3/2017","5/1/2017","5/2/2017","5/3/2017"],
+    'city' : ['new york','new york','new york','mumbai','mumbai','mumbai','beijing','beijing','beijing'],
+    'temperature' : [65,66,68,75,78,82,80,77,79],
+    'humidity' : [56,58,60,80,83,85,26,30,35]
+})
+
+df1 = df
+df1
+
+df1.pivot(index='date',columns='city')
+
+df2 = df
+df2.pivot(index='date',columns='city',values='humidity')
 
 Q13. How do you change the data type of a column in a Pandas DataFrame?
+ANS - 
+
+
 
 Q14. How do you sort a Pandas DataFrame by a specific column?
 
