@@ -519,6 +519,143 @@ History	-0.159063	-0.158783	1.000000
 
 
 Q20. How do you select specific columns in a DataFrame using their labels?
+ANS -
+
+import pandas as pd
+
+# create Dataframe
+data = {
+    'Name': ['Jim', 'Dwight', 'Angela', 'Tobi'],
+    'Age': [26, 28, 27, 32],
+    'Department': ['Sales', 'Sales', 'Accounting', 'Human Resources']
+}
+
+df = pd.DataFrame(data)
+
+# to access the full information of a dataframe
+print(df)
+
+ Name  Age       Department
+0     Jim   26            Sales
+1  Dwight   28            Sales
+2  Angela   27       Accounting
+3    Tobi   32  Human Resources
+
+#to access a specific column of a dataframe
+print(df[['Name']])
+
+   Name
+0     Jim
+1  Dwight
+2  Angela
+3    Tobi
+
+#to access a specific multiples columns of a dataframe
+print(df[['Name','Department']])
+
+ Name       Department
+0     Jim            Sales
+1  Dwight            Sales
+2  Angela       Accounting
+3    Tobi  Human Resources
+
+#using .loc
+#selecting rows and columns with .loc
+
+print(df.loc[0:2,['Name','Department']])
+
+  Name  Department
+0     Jim       Sales
+1  Dwight       Sales
+2  Angela  Accounting
+
+#selecting columns by index
+
+print(df.iloc[:,[0,2]])
+
+ Name       Department
+0     Jim            Sales
+1  Dwight            Sales
+2  Angela       Accounting
+3    Tobi  Human Resources
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+import pandas as pd
+technologies = {
+    'Courses':["Spark","PySpark"],
+    'Fee' :[20000,25000],
+    'Duration':['30days','40days'],
+    'Discount':[1000,2300],
+    'Tutor':['Michel','Sam']
+              }
+df = pd.DataFrame(technologies)
+
+# Select First Two Columns
+print(df.iloc[:,:2])
+
+ Courses    Fee
+0    Spark  20000
+1  PySpark  25000
+
+# Select From 3rd to end
+print(df.iloc[:,2:])
+
+ Duration  Discount   Tutor
+0   30days      1000  Michel
+1   40days      2300     Sam
+
+# Select between indexes 1 and 4 (2,3,4)
+print(df.iloc[:,1:4])
+
+  Fee Duration  Discount
+0  20000   30days      1000
+1  25000   40days      2300
+
+# Selected by column position
+print(df.iloc[:,[1,3,4]])
+
+ Fee  Discount   Tutor
+0  20000      1000  Michel
+1  25000      2300     Sam
+
+# Select every alternate column
+print(df.loc[:,::2])
+
+ Courses Duration   Tutor
+0    Spark   30days  Michel
+1  PySpark   40days     Sam
+
+# Select columns by range
+print(df.loc[:,'Fee':'Discount']) 
+print(df.loc[:,'Duration':])
+print(df.loc[:,:'Duration'])
+
+   Fee Duration  Discount
+0  20000   30days      1000
+1  25000   40days      2300
+  Duration  Discount   Tutor
+0   30days      1000  Michel
+1   40days      2300     Sam
+   Courses    Fee Duration
+0    Spark  20000   30days
+1  PySpark  25000   40days
+
+# Select Random columns
+print(df.loc[:, ["Courses","Fee","Discount"]])
+
+ Courses    Fee  Discount
+0    Spark  20000      1000
+1  PySpark  25000      2300
+
+# Select multiple columns
+print(df[["Courses","Fee","Duration"]])
+
+ Courses    Fee Duration
+0    Spark  20000   30days
+1  PySpark  25000   40days
+
 
 Q21. How do you select specific rows in a DataFrame using their indexes?
 
