@@ -481,6 +481,42 @@ dtype: float64
 
 
 Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?
+ANS - 
+
+import pandas as pd
+
+# create dataframe
+df = pd.DataFrame({
+    'Maths': [78, 85, 67, 69, 53, 81, 93, 74],
+    'Physics': [81, 77, 63, 74, 46, 72, 88, 76],
+    'History': [53, 65, 95, 87, 63, 58, 73, 42]
+})
+
+# display the dataframe
+print(df)
+
+  Maths  Physics  History
+0     78       81       53
+1     85       77       65
+2     67       63       95
+3     69       74       87
+4     53       46       63
+5     81       72       58
+6     93       88       73
+7     74       76       42
+
+# correlation between Maths and Physics
+print(df['Maths'].corr(df['Physics']))
+
+0.9063395113712818
+
+df.corr()
+
+	Maths	Physics	History
+Maths	1.000000	0.906340	-0.159063
+Physics	0.906340	1.000000	-0.158783
+History	-0.159063	-0.158783	1.000000
+
 
 Q20. How do you select specific columns in a DataFrame using their labels?
 
