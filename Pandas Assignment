@@ -334,7 +334,36 @@ students_data_copy
 Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?
 ANS -
 
+import pandas as pd
 
+people_info = {
+    'first_name':['karan','arjun','vikas','vishal','rohit'],
+    'last_name':['rajpurohit','kushwah','azad','rajpur','sharma'],
+    'E-mail':['karan626@gmail.com','arjun9dh7@gmail.com','vikkkas7hd7e@gmail.com','vishaaal7ehh7t@gmail.com','rohittth 847477@gmail.com',]
+}
+
+people_details = pd.DataFrame(people_info)
+
+print(people_details)
+
+	first_name	last_name	E-mail
+0	karan	rajpurohit	karan626@gmail.com
+1	arjun	kushwah	arjun9dh7@gmail.com
+2	vikas	azad	vikkkas7hd7e@gmail.com
+3	vishal	rajpur	vishaaal7ehh7t@gmail.com
+4	rohit	sharma	rohittth 847477@gmail.com
+
+want_last_and_first_name = (people_details['last_name'] == 'rajpurohit') & (people_details['first_name'] == 'karan')
+
+people_details[want_last_and_first_name]
+
+first_name	last_name	E-mail
+0	karan	rajpurohit	karan626@gmail.com
+
+people_details.loc[want_last_and_first_name, 'E-mail']
+
+0    karan626@gmail.com
+Name: E-mail, dtype: object
 
 Q17. How do you calculate the mean of a column in a Pandas DataFrame?
 
