@@ -366,8 +366,119 @@ people_details.loc[want_last_and_first_name, 'E-mail']
 Name: E-mail, dtype: object
 
 Q17. How do you calculate the mean of a column in a Pandas DataFrame?
+ANS -
+
+#pandas mean 
+import pandas as pd
+data = pd.DataFrame({
+    'name':['karan','vikas','pankaj','aditya','samrat'],
+    'col_1':[10,20,30,40,50],
+    'col_2':[60,70,80,90,100]
+})
+
+details = data
+
+details
+
+name	col_1	col_2
+0	karan	10	60
+1	vikas	20	70
+2	pankaj	30	80
+3	aditya	40	90
+4	samrat	50	100
+
+#to find mean all of the columns
+print(details.mean())
+
+col_1    30.0
+col_2    80.0
+dtype: float64
+
+#to find mean of a specific column
+details['col_1'].mean()
+
+30.0
+
+#to find mean of a specific column
+details['col_2'].mean()
+
+80.0
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+data2 = pd.DataFrame({
+    'x1':[6,2,7,5,3,7,2,7,9],
+    'x2':range(0,9),
+    'group':['A','B','B','A','A','C','C','B','A']
+})
+
+details2 = data2
+details2
+
+	x1	x2	group
+0	6	0	A
+1	2	1	B
+2	7	2	B
+3	5	3	A
+4	3	4	A
+5	7	5	C
+6	2	6	C
+7	7	7	B
+8	9	8	A
+
+details2.mean()
+
+x1    5.333333
+x2    4.000000
+dtype: float64
+
 
 Q18. How do you calculate the standard deviation of a column in a Pandas DataFrame?
+ANS -
+
+import pandas as pd
+
+#create DataFrame
+
+df = pd.DataFrame({
+    'team':['x','x','y','y','y','y','z','z'],
+    'points':[22,10,11,16,12,45,36,40],
+    'assists':[8,9,13,7,22,24,4,6],
+    'rebounds':[17,14,3,5,9,8,7,4]
+})
+
+print(df)
+
+	team	points	assists	rebounds
+0	x	22	8	17
+1	x	10	9	14
+2	y	11	13	3
+3	y	16	7	5
+4	y	12	22	9
+5	y	45	24	8
+6	z	36	4	7
+7	z	40	6	4
+
+#this is how to calculate standerd deviation of a column.
+print(df['points'].std())
+
+14.23275899365364
+
+#this is how to calculate standerd deviation of a columns.
+print(df[['points','rebounds']].std())
+
+points      14.232759
+rebounds     4.897157
+dtype: float64
+
+#this is how to calculate standerd deviation of a table.
+print(df.std())
+
+points      14.232759
+assists      7.501190
+rebounds     4.897157
+dtype: float64
+
 
 Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?
 
