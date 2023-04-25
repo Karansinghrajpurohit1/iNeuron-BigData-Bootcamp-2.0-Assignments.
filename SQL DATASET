@@ -730,7 +730,7 @@ CREATE TABLE station(
 );
 
 
-INSERT INTO city VALUES
+INSERT INTO station VALUES
 (794,'Kissee Mills','MO',139,73),
 (824,'Loma Mar','CA',48,130),
 (603,'Sandy Hook','CT',72,148),
